@@ -11,7 +11,7 @@ import path from "path";
 
 Before(async function (this: CustomWorld) {
   this.browser = await chromium.launch({
-    headless: false,
+    headless: process.env.CI === "true",
   });
 
   const videosDir = path.join(process.cwd(), "videos");
@@ -39,7 +39,7 @@ Before(async function (this: CustomWorld) {
 });
 
 After(async function (this: CustomWorld, scenario) {
-  if (scenario.result?.status === "FAILED") {
+  if (scenario.result?.status === "FAILED" && this.page) {
     const screenshotsDir = path.join(process.cwd(), "screenshots");
 
     fs.mkdirSync(screenshotsDir, { recursive: true });
