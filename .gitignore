@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Test results
+test-results/
+playwright-report/
+
+# Cucumber temporary files
+.cucumber/
+
+# Videos and screenshots
+videos/
+screenshots/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
