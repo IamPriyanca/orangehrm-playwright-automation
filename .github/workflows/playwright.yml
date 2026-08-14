@@ -31,8 +31,8 @@ jobs:
         run: npm run bdd
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PASSWORD: ${{ secrets.PASSWORD }}
+          USERNAME: ${{ secrets.HRM_USERNAME }}
+          PASSWORD: ${{ secrets.HRM_PASSWORD }}
 
       - name: Upload Cucumber report
         if: always()
