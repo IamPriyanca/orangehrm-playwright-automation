@@ -9,9 +9,9 @@ if (!env.baseUrl) {
 }
 
 if (!env.username) {
-  throw new Error("USERNAME environment variable is missing");
+  throw new Error("HRM_USERNAME environment variable is missing");
 }
 
 if (!env.password) {
-  throw new Error("PASSWORD environment variable is missing");
+  throw new Error("HRM_PASSWORD environment variable is missing");
 }
