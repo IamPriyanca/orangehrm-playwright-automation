@@ -32,7 +32,7 @@ jobs:
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
           HRM_USERNAME: ${{ secrets.HRM_USERNAME }}
-          PASSWORD: ${{ secrets.HRM_PASSWORD }}
+          HRM_PASSWORD: ${{ secrets.HRM_PASSWORD }}
 
       - name: Upload Cucumber report
         if: always()
